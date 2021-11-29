@@ -1,0 +1,36 @@
+@import "../../index";
+
+.banner__breadcrumb {
+  background-size: cover !important;
+  background-position: center !important;
+  padding: 2rem 0;
+  text-align: center;
+
+  .breadcrumb {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    li {
+      display: flex;
+      align-items: center;
+      width: auto;
+      padding: 0;
+
+      a {
+        color: rgba($color: $primaryColor, $alpha: 0.6);
+        font-size: 0.8rem;
+        text-transform: capitalize;
+
+        &:hover {
+          color: $secondaryColor;
+        }
+      }
+
+      span {
+        text-transform: capitalize;
+        color: $secondaryColor;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

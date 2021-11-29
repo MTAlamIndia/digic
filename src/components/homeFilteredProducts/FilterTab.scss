@@ -1,0 +1,32 @@
+@import "../../index";
+
+.filter__tab {
+  color: $primaryColor !important;
+  position: relative;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    width: 0;
+    height: 3px;
+    background-color: $secondaryColor;
+  }
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: $secondaryColor !important;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}

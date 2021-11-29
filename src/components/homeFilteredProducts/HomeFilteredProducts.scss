@@ -1,0 +1,14 @@
+@import "../../index";
+
+.home__filtered__products {
+  .filter__tabs {
+    text-align: center;
+    border-bottom: 1px solid $GreyColor;
+  }
+  .filter_products {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+  }
+}

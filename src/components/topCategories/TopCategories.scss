@@ -1,0 +1,15 @@
+@import "../../index";
+
+.top__categories {
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 0;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    padding-top: 2rem;
+  }
+}

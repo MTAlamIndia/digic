@@ -1,0 +1,53 @@
+@import "../../index";
+
+.mini__cart {
+  box-shadow: 0 0 0.3rem 0 rgba($color: $primaryColor, $alpha: 0.1);
+  background-color: $whiteColor;
+  width: 500px;
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+  transition: all 0.5s;
+  transform: translateY(50%);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  max-height: 400px;
+  overflow-y: auto;
+
+  &.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    z-index: 1111;
+  }
+
+  .mini__cart--total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    p {
+      font-size: 1rem;
+
+      &:not(:last-of-type) {
+        margin-right: 1rem;
+      }
+    }
+
+    .total__amount {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+
+  .empty__cart {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    text-align: center;
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../index";
+
+.header__bottom {
+  .header__bottom-wrapper {
+    position: relative;
+
+    .header__bottom--nav {
+      padding: 0 1rem;
+      ul {
+        display: inline-flex;
+        padding: 0;
+
+        li {
+          padding: 0;
+
+          a {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            line-height: 3rem;
+            padding: 0 1rem;
+
+            &.active {
+              color: $secondaryColor;
+            }
+          }
+        }
+      }
+    }
+
+    .header__bottom--notice {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      font-size: 0.9rem;
+
+      svg {
+        color: $secondaryColor;
+        font-size: 1.2rem;
+      }
+
+      span {
+        padding-left: 0.3rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../index";
+
+.sidebar__widget--content.brand {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  li {
+    padding: 0 !important;
+    display: block;
+
+    label {
+      margin: 0;
+      font-size: 0.9rem;
+      padding: 0.1rem 1rem 0.1rem 0.6rem;
+      text-transform: capitalize;
+
+      .MuiCheckbox-root {
+        padding: 0.3rem;
+
+        svg {
+          font-size: 1.2rem;
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+
+        &:hover {
+          background-color: rgba($color: $secondaryColor, $alpha: 0.04);
+        }
+        &.Mui-checked {
+          color: $secondaryColor !important;
+        }
+      }
+
+      .MuiFormControlLabel-label {
+        font-size: 0.9rem;
+        line-height: 1;
+      }
+    }
+  }
+}

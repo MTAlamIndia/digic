@@ -1,0 +1,69 @@
+@import "../../index";
+
+.home__main__slider {
+  .slide {
+    min-height: 20rem;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    align-items: center;
+
+    .slide__content {
+      padding-left: 3rem;
+      h2 {
+        text-transform: capitalize;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+      a {
+        display: inline-flex;
+        align-items: center;
+        background-color: $primaryColor;
+        font-size: 0.9rem;
+        color: $whiteColor;
+        padding: 0.5rem 1rem;
+        margin-top: 1.5rem;
+        border-radius: 2rem;
+
+        svg {
+          font-size: 1.6rem;
+          margin-left: 0.5rem;
+        }
+
+        &:hover {
+          background-color: $secondaryColor;
+        }
+      }
+    }
+  }
+  .slick-dots {
+    bottom: 1rem;
+    max-width: calc(1200px - 48px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+      width: unset;
+
+      button {
+        padding: 0 !important;
+        width: 0.4rem;
+        height: 0.4rem;
+        margin: 0 !important;
+        background-color: rgba($color: $primaryColor, $alpha: 0.2);
+        border-radius: 50%;
+        transition: all 0.3s linear;
+
+        &::before {
+          display: none;
+        }
+      }
+
+      &.slick-active button {
+        width: 1.5rem;
+        border-radius: 1rem;
+        background-color: rgba($color: $secondaryColor, $alpha: 1);
+      }
+    }
+  }
+}

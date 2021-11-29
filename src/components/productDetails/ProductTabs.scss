@@ -1,0 +1,37 @@
+@import "../../index";
+
+.product__tabs {
+  padding-top: 3rem;
+
+  .product__tabs--buttons {
+    button {
+      padding-left: 0;
+      padding-right: 0;
+      color: rgba($color: $primaryColor, $alpha: 0.5);
+      font-weight: 600;
+      text-transform: capitalize;
+      font-size: 1.1rem;
+
+      &[aria-selected="true"] {
+        color: rgba($color: $primaryColor, $alpha: 1);
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 3rem;
+      }
+    }
+
+    span.MuiTabs-indicator {
+      background-color: $secondaryColor;
+      height: 3px;
+    }
+  }
+
+  .product__tabs--content {
+    img {
+      width: 100% !important;
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+  }
+}

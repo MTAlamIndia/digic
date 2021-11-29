@@ -1,0 +1,82 @@
+@import "../../index";
+
+.update__quantity {
+  display: flex;
+  border: 1px solid $GreyColor;
+
+  div::before,
+  div::after {
+    display: none;
+  }
+
+  span,
+  input {
+    width: 2rem;
+    text-align: center;
+    min-height: 2rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button {
+    color: $primaryColor;
+    padding: 0;
+    min-width: unset;
+    width: 2rem;
+    display: block;
+    border-radius: 0;
+  }
+
+  .quantity__control {
+    display: flex;
+    border: 1px solid $GreyColor;
+    border-radius: 2rem;
+    overflow: hidden;
+
+    span,
+    input {
+      width: 3rem;
+      min-height: 2.5rem;
+    }
+
+    button {
+      width: 3rem;
+    }
+  }
+
+  .quantity__submit__buttons {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+
+    button {
+      width: auto;
+      background-color: rgba($color: $primaryColor, $alpha: 0.9);
+      color: $whiteColor;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 12rem;
+
+      svg {
+        margin-right: 0.5rem;
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+
+      &:last-of-type {
+        background-color: $secondaryColor;
+      }
+
+      &:hover {
+        background-color: $secondaryColor;
+      }
+    }
+  }
+}

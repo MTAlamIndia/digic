@@ -1,0 +1,59 @@
+@import "../../../index";
+
+.header__bottom--categories {
+  position: relative;
+
+  button {
+    background-color: $secondaryColor !important;
+    color: $whiteColor !important;
+    border-radius: 0.4rem 0.4rem 0 0 !important;
+    width: 100%;
+    justify-content: start;
+    text-transform: capitalize;
+    padding: 0 1.5rem;
+    height: 3rem;
+
+    svg {
+      font-size: 1rem;
+
+      &:first-of-type {
+        font-size: 1.3rem;
+      }
+
+      &:last-of-type {
+        margin-left: auto;
+      }
+    }
+
+    span {
+      display: inline-block;
+      padding: 0 0.5rem;
+    }
+  }
+
+  .header__bottom--categories--list {
+    box-shadow: 0 0 10px 1px rgba(143, 143, 143, 0.1);
+    border-radius: 0 0 0.4rem 0.4rem;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    background-color: $whiteColor;
+
+    li {
+      padding: 0;
+
+      div {
+        padding: 0;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1.5rem;
+        border-bottom: 1px solid $GreyColor;
+        font-size: 0.9rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../index";
+
+.sidebar__widget--content.price {
+  padding: 1.5rem 1rem !important;
+  padding-right: 1.5rem !important;
+
+  .MuiSlider-root {
+    height: 2px;
+
+    .MuiSlider-rail {
+      background-color: $GreyColor;
+    }
+
+    .MuiSlider-track {
+      background-color: $primaryColor;
+      border-color: $primaryColor;
+    }
+
+    .MuiSlider-thumb {
+      width: 12px;
+      height: 12px;
+      background-color: $secondaryColor;
+      color: $secondaryColor;
+
+      &:hover,
+      &.Mui-focusVisible {
+        box-shadow: 0 0 0 8px rgba($color: $secondaryColor, $alpha: 0.16) !important;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: rgba($color: $primaryColor, $alpha: 0.8);
+
+    span {
+      color: rgba($color: $primaryColor, $alpha: 1);
+      font-weight: 500;
+    }
+  }
+}

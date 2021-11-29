@@ -1,0 +1,10 @@
+@import "../../index";
+
+footer {
+  background-color: $GreyColor;
+  padding: 1rem;
+  margin-top: auto;
+  p {
+    font-size: 0.9rem;
+  }
+}

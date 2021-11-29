@@ -1,0 +1,98 @@
+@import "../../index";
+
+.category__item {
+  flex: 0 0 10rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    display: block;
+
+    .image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $primaryColor, $alpha: 0.5);
+        transition: all 0.5s;
+        opacity: 0;
+        z-index: 2;
+      }
+
+      &::after {
+        content: "";
+        background: url("./plus.png");
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50%);
+        left: calc(50%);
+        transform: translate(-50%, -50%);
+        transition: all 0.5s;
+        z-index: 3;
+        opacity: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        transition: all 0.5s;
+      }
+    }
+
+    &:hover .image {
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+      img {
+        animation: catImageAnim 2s ease-in-out 1;
+      }
+    }
+    p {
+      margin-top: 0.8rem;
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  }
+}
+
+@keyframes catImageAnim {
+  16.65% {
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+  }
+  33.33% {
+    -webkit-transform: rotate(-13deg);
+    transform: rotate(-13deg);
+  }
+  49.95% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  66.6% {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+  }
+  83.25% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}

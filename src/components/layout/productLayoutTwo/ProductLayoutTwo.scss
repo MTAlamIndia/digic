@@ -1,0 +1,117 @@
+@import "../../../index";
+
+.product__layout--two {
+  .image__wrapper {
+    display: block;
+    position: relative;
+    border: 1px solid $GreyColor;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 16rem;
+      object-fit: contain;
+      object-position: center;
+      transition: all 0.3s linear;
+
+      &.secondary__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .icons__wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: $whiteColor;
+    transition: all 0.3s linear;
+    transform: translateY(110%);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px 0 rgba($color: $primaryColor, $alpha: 0.1);
+
+    .button {
+      background: transparent;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      border: 0;
+      color: $primaryColor;
+      font-size: 1.1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 !important;
+      min-width: unset !important;
+      transition: all 0.3s linear;
+      margin: 0 0.5rem;
+
+      &:hover {
+        background: $secondaryColor;
+        color: $whiteColor;
+      }
+    }
+  }
+
+  &:hover {
+    .primary__image {
+      opacity: 0;
+    }
+
+    .secondary__image {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .icons__wrapper {
+      transform: translateY(0);
+    }
+  }
+
+  .content__wrapper {
+    padding: 1rem 0;
+
+    h6 {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      font-weight: 400;
+      text-transform: capitalize;
+
+      span:not(:last-of-type):after {
+        content: ", ";
+      }
+    }
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      margin: 0.2rem 0;
+    }
+
+    .price {
+      del {
+        font-size: 0.9rem;
+        opacity: 0.7;
+        font-weight: 400;
+        margin-right: 0.5rem;
+      }
+
+      span {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

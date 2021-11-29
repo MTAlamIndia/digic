@@ -1,0 +1,28 @@
+@import "../../index";
+
+.sidebar__widget--content.category {
+  li {
+    display: block;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    cursor: pointer;
+    border-bottom: 1px solid $GreyColor;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    transition: all 0.3s;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    span {
+      font-size: small;
+      color: rgba($color: $primaryColor, $alpha: 0.7);
+    }
+
+    &:hover,
+    &.active {
+      color: $secondaryColor;
+    }
+  }
+}
